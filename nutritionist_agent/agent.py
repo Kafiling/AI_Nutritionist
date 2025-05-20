@@ -2,7 +2,7 @@ import datetime
 from zoneinfo import ZoneInfo
 from google.adk.agents import Agent
 
-from .sub_agents.detectIngredientAgent.agent import detectIngredientAgent
+from .sub_agents.detect_ingredient_agent.agent import detectIngredientAgent
 
 def get_weather(city: str) -> dict:
     """Retrieves the current weather report for a specified city.
