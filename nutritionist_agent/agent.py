@@ -2,7 +2,8 @@ import datetime
 from zoneinfo import ZoneInfo
 from google.adk.agents import Agent
 
-from .sub_agents.detect_ingredient_agent.agent import detectIngredientAgent
+from .sub_agents.detect_ingredient_agent.agent import detect_ingredient_agent
+from .sub_agents.assessing_ingredient_agent.agent import assessing_ingredient_agent
 
 def get_weather(city: str) -> dict:
     """Retrieves the current weather report for a specified city.
@@ -65,6 +66,6 @@ root_agent = Agent(
     instruction=(
         """You are an manager agent. You have 1 sub-agent, which is a detectIngredientAgent."""
     ),
-    sub_agents=[detectIngredientAgent],
+    sub_agents=[detect_ingredient_agent,assessing_ingredient_agent],
     tools=[get_weather, get_current_time],
 )

@@ -8,7 +8,7 @@ MODEL = "gemini-2.5-flash-preview-04-17"
 
 
 
-detectIngredientAgent = Agent(
+detect_ingredient_agent = Agent(
     model=MODEL,
     name="detectIngredientAgent",
     description=(
